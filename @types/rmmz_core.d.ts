@@ -1603,7 +1603,7 @@ declare class Window extends PIXI.Container {
   public _padding: number;
   public _margin: number;
   public _colorTone: number[];
-  public _innerChildren: [];
+  public _innerChildren: PIXI.DisplayObject[];
 
   public _container: PIXI.Container;
   public _backSprite: Sprite;
