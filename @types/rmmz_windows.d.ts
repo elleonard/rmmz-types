@@ -423,7 +423,7 @@ declare class Window_Gold extends Window_Base {
 declare class Window_StatusBase extends Window_Selectable {
   public constructor(rect: Rectangle, ...args: any[]);
 
-  public _additionalSprites: any;
+  public _additionalSprites: Sprite[];
 
   public initialize(rect: Rectangle, ...args: any[]): void;
 
