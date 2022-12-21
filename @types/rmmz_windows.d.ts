@@ -1530,7 +1530,7 @@ declare class Window_ActorCommand extends Window_Command {
 /**
  * The window for displaying the status of party members on the battle screen.
  */
-declare class Window_BattleStatus extends Window_Selectable {
+declare class Window_BattleStatus extends Window_StatusBase {
   public constructor(rect: Rectangle, ...args: any[]);
 
   public _bitmapsReady: number;
