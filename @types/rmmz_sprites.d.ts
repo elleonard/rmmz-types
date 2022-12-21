@@ -27,7 +27,7 @@ declare class Sprite_Clickable extends Sprite {
 declare class Sprite_Button extends Sprite_Clickable {
   public constructor(buttonType: string);
 
-  public _touching: boolean;
+  public _buttonType: string;
   public _coldFrame: Rectangle | null;
   public _hotFrame: Rectangle | null;
   public _clickHandler: () => void | null;
