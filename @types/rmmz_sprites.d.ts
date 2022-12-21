@@ -30,7 +30,7 @@ declare class Sprite_Button extends Sprite_Clickable {
   public _buttonType: string;
   public _coldFrame: Rectangle | null;
   public _hotFrame: Rectangle | null;
-  public _clickHandler: () => void | null;
+  public _clickHandler: (() => void) | null;
 
   public initialize(...args: any[]): void;
 
@@ -47,7 +47,7 @@ declare class Sprite_Button extends Sprite_Clickable {
 
   public setColdFrame(x: number, y: number, width: number, height: number): void;
   public setHotFrame(x: number, y: number, width: number, height: number): void;
-  public setClickHandler(method: () => void | null): void;
+  public setClickHandler(method: (() => void) | null): void;
   public onClick(): void;
 }
 
