@@ -995,12 +995,7 @@ type BitmapLoadListener = () => void;
  * The basic object that is rendered to the game screen.
  */
 declare class Sprite extends PIXI.Sprite {
-  /**
-   * @class Sprite
-   * @constructor
-   * @param {Bitmap} bitmap The image for the sprite
-   */
-  public constructor(bitmap?: Bitmap | null);
+  public constructor(...args: any[]);
 
   public static readonly voidFilter: PIXI.filters.VoidFilter;
 

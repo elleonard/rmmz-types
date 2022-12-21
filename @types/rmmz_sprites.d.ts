@@ -1,29 +1,6 @@
 //=============================================================================
-// rmmz_sprites.js v1.1.0
+// rmmz_sprites.js v1.6.0
 //=============================================================================
-
-//-----------------------------------------------------------------------------
-/**
- * The sprite class with a feature which displays animations.
- */
-declare class Sprite_Base extends Sprite {
-  public constructor();
-
-  public _animationSprites: Sprite_Animation[];
-  public _effectTarget: Sprite_Base;
-  public _hiding: boolean;
-
-  public initialize(...args: any[]): void;
-
-  public update(): void;
-  public hide(): void;
-  public show(): void;
-  public updateVisibility(): void;
-  public updateAnimationSprites(): void;
-
-  public startAnimation(animation: MZ.Animation | null, mirror: boolean, delay: number): void;
-  public isAnimationPlaying(): boolean;
-}
 
 declare class Sprite_Clickable extends Sprite {
   public _pressed: boolean;
@@ -78,7 +55,7 @@ declare class Sprite_Button extends Sprite_Clickable {
 /**
  * The sprite for displaying a character.
  */
-declare class Sprite_Character extends Sprite_Base {
+declare class Sprite_Character extends Sprite {
   public constructor(character: Game_Character);
 
   public _character: Game_Character;
@@ -137,7 +114,7 @@ declare class Sprite_Character extends Sprite_Base {
 /**
  * The superclass of Sprite_Actor and Sprite_Enemy.
  */
-declare class Sprite_Battler extends Sprite_Base {
+declare class Sprite_Battler extends Sprite {
   public constructor(battler: Game_Battler | null);
 
   public _battler: Game_Battler | null;
@@ -197,7 +174,7 @@ declare class Sprite_Actor extends Sprite_Battler {
   public _motion: { readonly index: number; readonly loop: boolean } | null;
   public _motionCount: number;
   public _pattern: number;
-  public _mainSprite: Sprite_Base;
+  public _mainSprite: Sprite;
   public _shadowSprite: Sprite;
   public _weaponSprite: Sprite_Weapon;
   public _stateSprite: Sprite_StateOverlay;
@@ -564,7 +541,7 @@ declare class Sprite_StateIcon extends Sprite {
 /**
  * The sprite for displaying an overlay image for a state.
  */
-declare class Sprite_StateOverlay extends Sprite_Base {
+declare class Sprite_StateOverlay extends Sprite {
   public constructor();
 
   public _battler: Game_Battler | null;
@@ -587,7 +564,7 @@ declare class Sprite_StateOverlay extends Sprite_Base {
 /**
  * The sprite for displaying a weapon image for attacking.
  */
-declare class Sprite_Weapon extends Sprite_Base {
+declare class Sprite_Weapon extends Sprite {
   public constructor();
 
   public _weaponImageId: number;
@@ -611,7 +588,7 @@ declare class Sprite_Weapon extends Sprite_Base {
 /**
  * The sprite for displaying a balloon icon.
  */
-declare class Sprite_Balloon extends Sprite_Base {
+declare class Sprite_Balloon extends Sprite {
   public constructor();
 
   public _balloonId: number;
