@@ -557,17 +557,22 @@ declare class Scene_File extends Scene_MenuBase {
   public initialize(...args: any[]): void;
 
   public create(): void;
+  public helpAreaHeight(): number;
   public start(): void;
 
   public savefileId(): number;
+  public isSavefileEnabled(savefileId: number): boolean;
 
   public createHelpWindow(): void;
+  public helpWindowRect(): Rectangle;
   public createListWindow(): void;
+  public listWindowRect(): Rectangle;
 
   public mode(): string | null;
+  public needsAutosave(): boolean;
   public activateListWindow(): void;
   public helpWindowText(): string;
-  public firstSavefileIndex(): number;
+  public firstSavefileId(): number;
 
   public onSavefileOk(): void;
 }

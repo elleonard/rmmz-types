@@ -196,15 +196,15 @@ declare class StorageManager {
 
   public static isLocalMode(): boolean;
 
-  public static saveObject(saveName: string, object: object): Promise<any>;
-  public static loadObject(saveName: string): Promise<object>;
+  public static saveObject(saveName: string, object: any): Promise<void>;
+  public static loadObject(saveName: string): Promise<number>;
 
-  public static objectToJson(object: object): Promise<string>;
-  public static jsonToObject(json: string): Promise<object>;
+  public static objectToJson(object: any): Promise<string>;
+  public static jsonToObject(json: string): Promise<any>;
   public static jsonToZip(json: string): Promise<string>;
   public static zipToJson(zip: string): Promise<string>;
 
-  public static saveZip(saveName: string, zip: string): Promise<any>;
+  public static saveZip(saveName: string, zip: string): Promise<void>;
   public static loadZip(saveName: string): Promise<any>;
 
   public static exists(saveName: string): boolean;
