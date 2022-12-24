@@ -530,8 +530,8 @@ declare class Graphics {
   public static _onTick(deltaTIme: any): void;
   public static _canRender(): boolean;
   public static _updateRealScale(): void;
-  public static _strechWidth(): number;
-  public static _strechHeight(): number;
+  public static _stretchWidth(): number;
+  public static _stretchHeight(): number;
   public static _makeErrorHtml(name: string, message: string): string;
   public static _defaultStretchMode(): boolean;
   public static _createErrorPrinter(): void;
