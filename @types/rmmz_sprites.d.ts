@@ -435,7 +435,7 @@ declare class Sprite_Damage extends Sprite {
   public digitWidth(): number;
   public digitHeight(): number;
   public createMiss(): void;
-  public createDigits(baseRow: number, value: number): void;
+  public createDigits(value: number): void;
   public createChildSprite(): Sprite;
 
   public update(): void;
