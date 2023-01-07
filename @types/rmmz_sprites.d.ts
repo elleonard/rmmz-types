@@ -426,17 +426,29 @@ declare class Sprite_Damage extends Sprite {
   public _duration: number;
   public _flashColor: number[];
   public _flashDuration: number;
-  public _damageBitmap: Bitmap;
+  public _colorType: number;
 
   public initialize(...args: any[]): void;
+  /**
+   * コード的にはoptionsが渡されているが、親クラスで握りつぶされている
+   */
+  public destroy(options?: {
+    children?: boolean;
+    texture?: boolean;
+    baseTexture?: boolean;
+  }): void;
 
   public setup(target: Game_Battler): void;
   public setupCriticalEffect(): void;
-  public digitWidth(): number;
-  public digitHeight(): number;
+  public fontFace(): string;
+  public fontSize(): number;
+  public damageColor(): string;
+  public outlineColor(): string;
+  public outlineWidth(): number;
   public createMiss(): void;
   public createDigits(value: number): void;
-  public createChildSprite(): Sprite;
+  public createChildSprite(width: number, height: number): Sprite;
+  public createBitmap(width: number, height: number): Bitmap;
 
   public update(): void;
   public updateChild(sprite: Sprite): void;
