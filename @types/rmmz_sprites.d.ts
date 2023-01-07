@@ -459,7 +459,7 @@ declare class Sprite_Damage extends Sprite {
 }
 
 declare class Sprite_Gauge extends Sprite {
-  _battler: Game_Battler|null;
+  _battler: Game_Battler | null;
   _statusType: string;
   _value: number;
   _maxValue: number;
@@ -472,7 +472,14 @@ declare class Sprite_Gauge extends Sprite {
 
   public initialize(): void;
   public initMembers(): void;
-  public destroy(): void;
+  /**
+   * コード的にはoptionsが渡されているが、親クラスで握りつぶされている
+   */
+  public destroy(options?: {
+    children?: boolean;
+    texture?: boolean;
+    baseTexture?: boolean;
+  }): void;
 
   public createBitmap(): void;
   public bitmapWidth(): number;
