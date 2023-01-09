@@ -573,10 +573,10 @@ declare class Game_Action {
   public setGuard(): void;
   public setSkill(skillId: number): void;
   public setItem(itemId: number): void;
-  public setItemObject(object: DataManager.Item): void;
+  public setItemObject(object: MZ.Item|MZ.Skill): void;
   public setTarget(targetIndex: number): void;
 
-  public item(): DataManager.Item | null;
+  public item(): MZ.Item|MZ.Skill | null;
   public isSkill(): boolean;
   public isItem(): boolean;
   public numRepeats(): number;
