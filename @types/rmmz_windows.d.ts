@@ -1130,6 +1130,11 @@ declare class Window_NameInput extends Window_Selectable {
 }
 
 declare class Window_NameBox extends Window_Base {
+  public _messageWindow: Window_Message;
+  public _name: string;
+
+  public constructor(...any: any[]);
+
   public initialize(): void;
 
   public setMessageWindow(messageWindow: Window_Message): void;
