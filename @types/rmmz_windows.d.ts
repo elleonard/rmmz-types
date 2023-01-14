@@ -526,7 +526,7 @@ declare class Window_MenuActor extends Window_MenuStatus {
 
   public processOk(): void;
   public selectLast(): void;
-  public selectForItem(item: DataManager.Item): void;
+  public selectForItem(item: MZ.Item|MZ.Skill): void;
 }
 
 //-----------------------------------------------------------------------------

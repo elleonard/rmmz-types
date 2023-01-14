@@ -349,13 +349,15 @@ declare class Scene_ItemBase extends Scene_MenuBase {
 
   public create(): void;
   public createActorWindow(): void;
+  public actorWindowRect(): Rectangle;
 
-  public item(): DataManager.Item | null;
+  public item(): MZ.Item | MZ.Skill | null;
   public user(): Game_Actor | null;
 
   public isCursorLeft(): boolean;
-  public showSubWindow(window: Window_Base): void;
-  public hideSubWindow(window: Window_Base): void;
+  public showActorWindow(): void;
+  public hideActorWindow(): void;
+  public isActorWindowActive(): boolean;
 
   public onActorOk(): void;
   public onActorCancel(): void;
