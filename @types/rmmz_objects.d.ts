@@ -1210,7 +1210,7 @@ declare class Game_Actor extends Game_Battler {
   public initSkills(): void;
   public initEquips(equips: number[]): void;
   public equipSlots(): number[];
-  public equips(): (MZ.Weapon | MZ.Armor)[];
+  public equips(): (MZ.Weapon | MZ.Armor | null)[];
   public weapons(): MZ.Weapon[];
   public armors(): MZ.Armor[];
   public hasWeapon(weapon: MZ.Weapon): boolean;
