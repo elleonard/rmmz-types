@@ -405,7 +405,8 @@ declare class Game_Screen {
     scaleY: number,
     opacity: number,
     blendMode: number,
-    duration: number
+    duration: number,
+    easingType: number
   ): void;
   public rotatePicture(pictureId: number, speed: number): void;
   public tintPicture(pictureId: number, tone: number[], duration: number): void;
