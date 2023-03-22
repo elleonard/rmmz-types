@@ -197,7 +197,7 @@ declare class StorageManager {
   public static isLocalMode(): boolean;
 
   public static saveObject(saveName: string, object: any): Promise<void>;
-  public static loadObject(saveName: string): Promise<number>;
+  public static loadObject(saveName: string): Promise<any>;
 
   public static objectToJson(object: any): Promise<string>;
   public static jsonToObject(json: string): Promise<any>;
