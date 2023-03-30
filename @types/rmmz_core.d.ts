@@ -1746,7 +1746,7 @@ declare class Window extends PIXI.Container {
    * @property contentsOpacity
    * @type Number
    */
-  public contentOpacity: number;
+  public contentsOpacity: number;
 
   /**
    * The openness of the window (0 to 255).
