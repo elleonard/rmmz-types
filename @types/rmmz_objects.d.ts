@@ -1023,6 +1023,7 @@ declare class Game_Battler extends Game_BattlerBase {
   public requestEffect(effectType: string | null): void;
   public requestMotion(motionType: string | null): void;
   public requestMotionRefresh(): void;
+  public cancelMotionRefresh(): void;
   public select(): void;
   public deselect(): void;
 
