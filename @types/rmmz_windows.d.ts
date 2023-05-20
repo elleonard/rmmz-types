@@ -301,7 +301,7 @@ declare class Window_Selectable extends Window_Scrollable {
 
   public callUpdateHelp(): void;
   public updateHelp(): void;
-  public setHelpWindowItem(item: MZ.Item | MZ.Skill | null): void;
+  public setHelpWindowItem(item: DataManager.DrawableItem | null): void;
   public isCurrentItemEnabled(): boolean;
 
   public drawAllItems(): void;
