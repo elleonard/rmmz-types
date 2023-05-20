@@ -19261,7 +19261,7 @@ declare namespace PIXI {
          *
          * @member {PIXI.Container|PIXI.MaskData}
          */
-        mask: PIXI.Container | PIXI.MaskData;
+        mask: PIXI.Container | PIXI.MaskData | null;
         /**
          * DisplayObject default updateTransform, does not update children of container.
          * Will crash if there's no parent element.
