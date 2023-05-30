@@ -30,6 +30,7 @@ declare namespace MZ {
     scale: number;
     soundTimings: Animation.SoundTiming[];
     speed: number;
+    alignBottom?: boolean;
   }
 
   namespace Animation {

@@ -241,7 +241,7 @@ declare class Sprite_Enemy extends Sprite_Battler {
 
   public update(): void;
   public updateBitmap(): void;
-  public loadBitmap(name: string, hue: number): void;
+  public loadBitmap(name: string): void;
   public updateFrame(): void;
   public updatePosition(): void;
   public updateStateSprite(): void;
