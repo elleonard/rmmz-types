@@ -2117,10 +2117,9 @@ declare class WebAudio {
    *
    * @static
    * @method initialize
-   * @param {Boolean} noAudio Flag for the no-audio mode
    * @return {Boolean} True if the audio system is available
    */
-  public static initialize(noAudio: boolean): boolean;
+  public static initialize(): boolean;
 
   /**
    * Set the master volume for all audio.
