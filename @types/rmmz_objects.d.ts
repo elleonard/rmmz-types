@@ -1119,7 +1119,7 @@ declare class Game_Battler extends Game_BattlerBase {
   public regenerateTp(): void;
   public regenerateAll(): void;
 
-  public onBattleStart(): void;
+  public onBattleStart(advantageous: boolean): void;
   public onAllActionsEnd(): void;
   public onTurnEnd(): void;
   public onBattleEnd(): void;
@@ -1432,7 +1432,7 @@ declare class Game_Unit {
 
   public clearResults(): void;
 
-  public onBattleStart(): void;
+  public onBattleStart(advantageous: boolean): void;
   public onBattleEnd(): void;
   public makeActions(): void;
   public select(activeMember: Game_Battler): void;
