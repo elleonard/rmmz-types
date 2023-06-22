@@ -754,7 +754,7 @@ declare interface GenericBattleManager<Battler, Actor extends Battler, Enemy ext
   updateStart(): void;
 
   startTurn(): void;
-  updateTurn(): void;
+  updateTurn(timeActive: boolean): void;
   updateTpb(): void;
   updateAllTpbBattler(): void;
   updateTpbBattler(): void;
