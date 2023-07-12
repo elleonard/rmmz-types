@@ -394,7 +394,9 @@ declare class Scene_Item extends Scene_ItemBase {
 
   public create(): void;
   public createCategoryWindow(): void;
+  public categoryWindowRect(): Rectangle;
   public createItemWindow(): void;
+  public itemWindowRect(): Rectangle;
 
   public user(): Game_Actor;
 
