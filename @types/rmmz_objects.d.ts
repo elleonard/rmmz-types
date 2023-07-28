@@ -976,7 +976,7 @@ declare class Game_BattlerBase {
   public meetsUsableItemConditions(item: MZ.Skill | MZ.Item): boolean;
   public meetsSkillConditions(skill: MZ.Skill): boolean;
   public meetsItemConditions(item: MZ.Item): boolean;
-  public canUse(item: MZ.Skill | MZ.Item): boolean;
+  public canUse(item: MZ.Skill | MZ.Item | null): boolean;
   public canEquip(item: MZ.Weapon | MZ.Armor): boolean;
   public canEquipWeapon(item: MZ.Weapon): boolean;
   public canEquipArmor(item: MZ.Armor): boolean;
@@ -1522,7 +1522,7 @@ declare class Game_Party extends Game_Unit {
   public discardMembersEquip(item: MZ.Weapon | MZ.Armor, amount: number): void;
   public loseItem(item: MZ.Item | MZ.Weapon | MZ.Armor, amount: number, includeEquip: boolean): void;
   public consumeItem(item: MZ.Item): void;
-  public canUse(item: MZ.Item): boolean;
+  public canUse(item: MZ.Item | null): boolean;
 
   public canInput(): boolean;
   public isAllDead(): boolean;

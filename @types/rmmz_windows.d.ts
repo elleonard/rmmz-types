@@ -570,7 +570,7 @@ declare class Window_ItemList extends Window_Selectable {
   public itemAt(index: number): MZ.Item | MZ.Weapon | MZ.Armor | null;
   public isCurrentItemEnabled(): boolean;
 
-  public includes(item: MZ.Item | MZ.Weapon | MZ.Armor): boolean;
+  public includes(item: MZ.Item | MZ.Weapon | MZ.Armor | null): boolean;
   public needsNumber(): boolean;
   public isEnabled(item: MZ.Item | MZ.Weapon | MZ.Armor): boolean;
 
