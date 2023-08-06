@@ -79,10 +79,10 @@ declare class DataManager {
 
   public static isBattleTest(): boolean;
   public static isEventTest(): boolean;
-  public static isSkill(item: DataManager.NoteHolder|null): item is MZ.Skill;
-  public static isItem(item: DataManager.NoteHolder|null): item is MZ.Item;
-  public static isWeapon(item: DataManager.NoteHolder|null): item is MZ.Weapon;
-  public static isArmor(item: DataManager.NoteHolder|null): item is MZ.Armor;
+  public static isSkill(item: DataManager.DrawableItem|DataManager.NoteHolder|null): item is MZ.Skill;
+  public static isItem(item: DataManager.DrawableItem|DataManager.NoteHolder|null): item is MZ.Item;
+  public static isWeapon(item: DataManager.DrawableItem|DataManager.NoteHolder|null): item is MZ.Weapon;
+  public static isArmor(item: DataManager.DrawableItem|DataManager.NoteHolder|null): item is MZ.Armor;
 
   public static createGameObjects(): void;
   public static setupNewGame(): void;
