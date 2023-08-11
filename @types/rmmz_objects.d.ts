@@ -280,7 +280,7 @@ declare class Game_Variables {
   public initialize(...args: any[]): void;
   public clear(): void;
   public value(variableId: number): number;
-  public setValue(variableId: number, value: number): void;
+  public setValue(variableId: number, value: number|string): void;
   public onChange(): void;
 }
 
