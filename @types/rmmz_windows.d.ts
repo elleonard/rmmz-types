@@ -63,8 +63,6 @@ declare class Window_Base extends Window {
   public activate(): void;
   public deactivate(): void;
 
-  public textColor(n: number): string;
-  public normalColor(): string;
   public systemColor(): string;
 
   public translucentOpacity(): number;
