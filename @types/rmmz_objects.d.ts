@@ -1518,9 +1518,9 @@ declare class Game_Party extends Game_Unit {
   public hasMaxItems(item: MZ.Item | MZ.Weapon | MZ.Armor): boolean;
   public hasItem(item: MZ.Item | MZ.Weapon | MZ.Armor | null, includeEquip?: boolean): boolean;
   public isAnyMemberEquipped(item: MZ.Weapon | MZ.Armor): boolean;
-  public gainItem(item: MZ.Item | MZ.Weapon | MZ.Armor, amount: number, includeEquip?: boolean): void;
+  public gainItem(item: MZ.Item | MZ.Weapon | MZ.Armor | null, amount: number, includeEquip?: boolean): void;
   public discardMembersEquip(item: MZ.Weapon | MZ.Armor, amount: number): void;
-  public loseItem(item: MZ.Item | MZ.Weapon | MZ.Armor, amount: number, includeEquip: boolean): void;
+  public loseItem(item: MZ.Item | MZ.Weapon | MZ.Armor | null, amount: number, includeEquip?: boolean): void;
   public consumeItem(item: MZ.Item): void;
   public canUse(item: MZ.Item | null): boolean;
 
