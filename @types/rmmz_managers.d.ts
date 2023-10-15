@@ -117,6 +117,7 @@ declare namespace DataManager {
   type Item = MZ.Skill | MZ.Item | MZ.Weapon | MZ.Armor;
   type DrawableItem = Item | {iconIndex: number, name: string};
   type GlobalInfo = SaveFileInfo[];
+  type TraitObject = MZ.Actor | MZ.Class | MZ.Enemy | MZ.Weapon | MZ.Armor | MZ.State;
 
   interface Error {
     name: string;

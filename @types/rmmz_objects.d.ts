@@ -878,7 +878,7 @@ declare class Game_BattlerBase {
   public buffIconIndex(buffLevel: number, paramId: number): number;
   public allIcons(): number[];
 
-  public traitObjects(): { traits: MZ.Trait[] }[];
+  public traitObjects(): (DataManager.TraitObject | { traits: MZ.Trait[] })[];
   public allTraits(): MZ.Trait[];
   public traits(code: number): MZ.Trait[];
   public traitsWithId(code: number, id: number): MZ.Trait[];
@@ -1247,7 +1247,7 @@ declare class Game_Actor extends Game_Battler {
   public skillTypes(): number[];
   public skills(): MZ.Skill[];
   public usableSkills(): MZ.Skill[];
-  public traitObjects(): { traits: MZ.Trait[] }[];
+  public traitObjects(): (DataManager.TraitObject | { traits: MZ.Trait[] })[];
   public attackElements(): number[];
   public hasNoWeapons(): boolean;
   public bareHandsElementId(): number;
@@ -1350,7 +1350,7 @@ declare class Game_Enemy extends Game_Battler {
   public isBattleMember(): boolean;
   public enemyId(): number;
   public enemy(): MZ.Enemy;
-  public traitObjects(): { traits: MZ.Trait[] }[];
+  public traitObjects(): (DataManager.TraitObject | { traits: MZ.Trait[] })[];
 
   public paramBase(paramId: number): number;
   public exp(): number;
