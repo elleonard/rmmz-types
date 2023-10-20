@@ -228,7 +228,7 @@ declare class StorageManager {
   public static fsUnlink(path: string): void;
   public static fsReadFile(path: string): string | null;
   public static fsWriteFile(path: string, data: string): void;
-  public static fsDirectoryPath(): string;
+  public static fileDirectoryPath(): string;
   public static filePath(saveName: string): string;
 
   public static forageKey(saveName: string): string;
