@@ -820,6 +820,7 @@ declare namespace BattleManager {
     push(methodName: string, ...args: any[]): void;
     startTurn(): void;
     startAction(subject: Battler, action: Action, targets: Battler[]): void;
+    showAnimation(subject: Battler, targets: Battler[], animationId: number): void;
     endAction(subject: Battler): void;
     displayAutoAffectedStatus(subject: Battler): void;
     displayCurrentState(subject: Battler): void;
