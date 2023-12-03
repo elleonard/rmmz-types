@@ -395,7 +395,7 @@ declare class Sprite_AnimationMV extends Sprite {
  * The sprite for displaying a background image in battle.
  */
 declare class Sprite_Battleback extends TilingSprite {
-  public constructor();
+  public constructor(type: number);
 
   public initialize(type: number): void;
   public adjustPosition(): void;
