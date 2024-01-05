@@ -1169,8 +1169,8 @@ declare class Tilemap extends PIXI.Container {
   public _margin: number;
   public _width: number;
   public _height: number;
-  public _tileWidth: number;
-  public _tileHeight: number;
+  public tileWidth: number;
+  public tileHeight: number;
   public _mapWidth: number;
   public _mapHeight: number;
   public _mapData: number[] | null;
@@ -1278,13 +1278,6 @@ declare class Tilemap extends PIXI.Container {
   public refresh(): void;
 
   /**
-   * Forces to refresh the tileset
-   *
-   * @method refresh
-   */
-  public refreshTileset(): void;
-
-  /**
    * @method updateTransform
    * @private
    */
@@ -1292,19 +1285,19 @@ declare class Tilemap extends PIXI.Container {
 
   public _createLayers(): void;
 
-  public _lowerLayer: Sprite | undefined;
-  public _upperLayer: Sprite | undefined;
+  public _lowerLayer: Tilemap.CombinedLayer | undefined;
+  public _upperLayer: Tilemap.CombinedLayer | undefined;
   public _needRepaint: boolean;
 
   public _updateBitmaps(): void;
   public _addAllSpots(startX: number, startY: number): void;
   public _addSpot(startX: number, startY: number, x: number, y: number): void;
   public _addSpotTile(tileId: number, dx: number, dy: number): void;
-  public _addTile(layer: Sprite, tileId: number, dx: number, dy: number): void;
-  public _addNormalTile(layer: Sprite, tileId: number, dx: number, dy: number): void;
-  public _addAutotile(layer: Sprite, tileId: number, dx: number, dy: number): void;
-  public _addTableEdge(layer: Sprite, tileId: number, dx: number, dy: number): void;
-  public _addShadow(layer: Sprite, shadowBits: number, dx: number, dy: number): void;
+  public _addTile(layer: Tilemap.CombinedLayer, tileId: number, dx: number, dy: number): void;
+  public _addNormalTile(layer: Tilemap.CombinedLayer, tileId: number, dx: number, dy: number): void;
+  public _addAutotile(layer: Tilemap.CombinedLayer, tileId: number, dx: number, dy: number): void;
+  public _addTableEdge(layer: Tilemap.CombinedLayer, tileId: number, dx: number, dy: number): void;
+  public _addShadow(layer: Tilemap.CombinedLayer, shadowBits: number, dx: number, dy: number): void;
   public _readMapData(x: number, y: number, z: number): number;
   public _isHigherTile(tileId: number): boolean;
   public _isTableTile(tileId: number): boolean;
@@ -1407,6 +1400,18 @@ declare namespace Tilemap {
     public _createVao(): void;
     public _updateIndexBuffer(): void;
     public _updateVertexBuffer(): void;
+  }
+
+  class CombinedLayer extends PIXI.Container {
+    z: number;
+
+    initialize(): void;
+    destroy(): void;
+    setBitmaps(bitmaps: Bitmap[]): void;
+    clear(): void;
+    size(): number;
+    addRect(setNumber: number, sx: number, sy: number, dx: number, dy: number, w: number, h: number): void;
+    isReady(): boolean;
   }
 
   class Renderer extends PIXI.ObjectRenderer {
