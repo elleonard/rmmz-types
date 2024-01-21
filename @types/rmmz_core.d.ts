@@ -935,7 +935,7 @@ declare class Bitmap {
    * @param {Number} radius The radius of the circle
    * @param {String} color The color of the circle in CSS format
    */
-  public drawCircle(x: number, y: number, radius: number, color: string): void;
+  public drawCircle(x: number, y: number, radius: number, color: string|CanvasGradient|CanvasPattern): void;
 
   /**
    * Draws the outline text to the bitmap.
