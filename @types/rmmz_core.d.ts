@@ -699,6 +699,8 @@ declare class Bitmap {
    */
   public static snap(stage: Stage): Bitmap;
 
+  public initialize(width: number, height: number): void;
+
   /**
    * Checks whether the bitmap is ready to render.
    *

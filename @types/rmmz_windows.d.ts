@@ -1452,7 +1452,7 @@ declare class Window_BattleLog extends Window_Base {
   public showAttackAnimation(subject: Game_Battler, targets: Game_Battler[]): void;
   public showActorAttackAnimation(subject: Game_Battler, targets: Game_Battler[]): void;
   public showEnemyAttackAnimation(subject: Game_Battler, targets: Game_Battler[]): void;
-  public showNormalAnimation(targets: Game_Battler, animationId: number, mirror: boolean): void;
+  public showNormalAnimation(targets: Game_Battler[], animationId: number, mirror: boolean): void;
 
   public refresh(): void;
   public drawBackground(): void;
