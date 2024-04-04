@@ -352,7 +352,7 @@ declare class Game_Screen {
   public zoomScale(): number;
   public weatherType(): string;
   public weatherPower(): number;
-  public picture(pictureId: number): Game_Picture;
+  public picture(pictureId: number): Game_Picture|undefined;
   public realPictureId(pictureId: number): number;
 
   public clearFade(): void;

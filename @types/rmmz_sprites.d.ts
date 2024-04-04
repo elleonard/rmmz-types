@@ -639,7 +639,7 @@ declare class Sprite_Picture extends Sprite {
 
   public initialize(...args: any[]): void;
 
-  public picture(): Game_Picture;
+  public picture(): Game_Picture|undefined;
 
   public update(): void;
   public updateBitmap(): void;
