@@ -513,7 +513,7 @@ declare class Scene_Status extends Scene_MenuBase {
   public createProfileWindow(): void;
   public profileWindowRect(): Rectangle;
   public createStatusWindow(): void;
-  public stattusWindowRect(): Rectangle;
+  public statusWindowRect(): Rectangle;
   public createStatusParamsWindow(): void;
   public statusParamsWindowRect(): Rectangle;
   public createStatusEquipWindow(): void;
