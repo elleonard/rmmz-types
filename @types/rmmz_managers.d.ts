@@ -685,7 +685,7 @@ declare interface GenericBattleManager<Battler, Actor extends Battler, Enemy ext
   _subject: Battler | null;
   _action: Action | null;
   _targets: Battler[];
-  _logWindow: BattleManager.LogWindow<Battler, Action> | null;
+  _logWindow: Window_BattleLog | null;
   _spriteset: BattleManager.Spriteset | null;
   _escapeRatio: number;
   _escaped: boolean;
@@ -699,7 +699,7 @@ declare interface GenericBattleManager<Battler, Actor extends Battler, Enemy ext
   isBattleTest(): boolean;
   setBattleTest(battleTest: boolean): void;
   setEventCallback(callback: BattleManager.Callback | null): void;
-  setLogWindow(logWindow: BattleManager.LogWindow<Battler, Action> | null): void;
+  setLogWindow(logWindow: Window_BattleLog | null): void;
   setSpriteset(spriteset: BattleManager.Spriteset | null): void;
 
   onEncounter(): void;
@@ -814,22 +814,6 @@ declare interface GenericBattleManager<Battler, Actor extends Battler, Enemy ext
 
 declare namespace BattleManager {
   type Callback = (result: number) => void;
-
-  interface LogWindow<Battler, Action> {
-    isBusy(): boolean;
-    push(methodName: string, ...args: any[]): void;
-    startTurn(): void;
-    startAction(subject: Battler, action: Action, targets: Battler[]): void;
-    showAnimation(subject: Battler, targets: Battler[], animationId: number): void;
-    endAction(subject: Battler): void;
-    displayAutoAffectedStatus(subject: Battler): void;
-    displayCurrentState(subject: Battler): void;
-    displayRegeneration(subject: Battler): void;
-    displayCounter(target: Battler): void;
-    displayReflection(target: Battler): void;
-    displaySubstitute(substitute: Battler, target: Battler): void;
-    displayActionResults(subject: Battler, target: Battler): void;
-  }
 
   interface Spriteset {
     isBusy(): boolean;
