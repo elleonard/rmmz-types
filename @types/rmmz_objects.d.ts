@@ -176,6 +176,7 @@ declare class Game_Timer {
   public stop(): void;
   public isWorking(): boolean;
   public seconds(): number;
+  public frames(): number;
   public onExpire(): void;
 }
 
