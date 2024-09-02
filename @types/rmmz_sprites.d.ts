@@ -662,7 +662,18 @@ declare class Sprite_Timer extends Sprite {
   public _seconds: number;
 
   public initialize(...args: any[]): void;
+  /**
+   * コード的にはoptionsが渡されているが、親クラスで握りつぶされている
+   */
+  public destroy(options?: {
+    children?: boolean;
+    texture?: boolean;
+    baseTexture?: boolean;
+  }): void;
   public createBitmap(): void;
+
+  public fontFace(): string;
+  public fontSize(): number;
 
   public update(): void;
   public updateBitmap(): void;
