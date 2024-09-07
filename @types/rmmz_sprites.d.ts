@@ -657,7 +657,7 @@ declare class Sprite_Picture extends Sprite {
  * The sprite for displaying the timer.
  */
 declare class Sprite_Timer extends Sprite {
-  public constructor();
+  public constructor(...args: any[]);
 
   public _seconds: number;
 
