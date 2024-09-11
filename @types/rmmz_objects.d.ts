@@ -59,7 +59,7 @@ declare class Game_Temp {
 
 declare namespace Game_Temp {
   interface AnimationRequest {
-    targets: Game_Character[];
+    targets: Game_Character[]|Game_Battler[];
     animationId: number;
     mirror: boolean;
   }

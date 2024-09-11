@@ -295,6 +295,8 @@ declare class Sprite_Animation extends Sprite {
   public _viewportSize: number;
   public _originalViewport: Int32Array | null;
 
+  public targetObjects: Game_Character[]|Game_Battler[];
+
   public z: number;
 
   public initialize(...args: any[]): void;
@@ -305,7 +307,7 @@ declare class Sprite_Animation extends Sprite {
     animation: MZ.Animation | null,
     mirror: boolean,
     delay: number,
-    previous: Sprite_Animation | Sprite_AnimationMV
+    previous: Sprite_Animation | Sprite_AnimationMV | null
   ): void;
 
   public update(): void;
@@ -358,6 +360,8 @@ declare class Sprite_AnimationMV extends Sprite {
   public _bitmap2: Bitmap | null;
   public _cellSprites: Sprite[];
   public _screenFlashSprite: ScreenSprite;
+  
+  public targetObjects: Game_Character[]|Game_Battler[];
   public z: number;
 
   public initialize(...args: any[]): void;
@@ -713,6 +717,8 @@ declare class Spriteset_Base extends Sprite {
   public _timerSprite: Sprite_Timer;
   public _flashSprite: ScreenSprite;
   public _fadeSprite: ScreenSprite;
+  public _animationSprites: (Sprite_Animation|Sprite_AnimationMV)[];
+  public _effectsContainer: Tilemap|Sprite;
 
   public initialize(...args: any[]): void;
 
@@ -734,6 +740,27 @@ declare class Spriteset_Base extends Sprite {
   public updateWebGLToneChanger(): void;
   public updateCanvasToneChanger(): void;
   public updatePosition(): void;
+
+  public findTargetSprite(target: Game_Character|Game_Battler): Sprite_Character|Sprite_Battler;
+  public updateAnimations(): void;
+  public processAnimationRequests(): void;
+  public createAnimation(request: Game_Temp.AnimationRequest): void;
+  public createAnimationSprite(
+    targets: Game_Character[]|Game_Battler[],
+    animation: MZ.Animation|MZ.AnimationMV,
+    mirror: boolean,
+    delay: number
+  ): void;
+  public isMVAnimation(animation: MZ.Animation|MZ.AnimationMV): animation is MZ.AnimationMV;
+  public makeTargetSprites(targets: Game_Character[]|Game_Battler[]): Sprite_Character[]|Sprite_Battler[];
+  public lastAnimationSprite(): Sprite_Animation|Sprite_AnimationMV|undefined;
+  public isAnimationForEach(animation: MZ.Animation|MZ.AnimationMV): boolean;
+  public animationBaseDelay(): number;
+  public animationNextDelay(): number;
+  public animationShouldMirror(target: Game_BattlerBase|null): boolean;
+  public removeAnimation(sprite: Sprite_Animation|Sprite_AnimationMV): void;
+  public removeAllAnimations(): void;
+  public isAnimationPlaying(): boolean;
 }
 
 //-----------------------------------------------------------------------------
