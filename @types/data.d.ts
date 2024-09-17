@@ -433,6 +433,10 @@ declare namespace MZ {
     victoryMe: AudioFile;
     weaponTypes: string[];
     windowTone: number[];
+
+    optSplashScreen: boolean;
+    optMessageSkip: boolean;
+    tileSize: number;
   }
 
   namespace System {

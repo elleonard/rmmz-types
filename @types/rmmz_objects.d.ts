@@ -106,6 +106,7 @@ declare class Game_System {
   public isSideView(): boolean;
 
   public isAutosaveEnabled(): boolean;
+  public isMessageSkipEnabled(): boolean;
   public isSaveEnabled(): boolean;
   public disableSave(): void;
   public enableSave(): void;
@@ -1439,7 +1440,7 @@ declare class Game_Unit {
   public select(activeMember: Game_Battler): void;
 
   public isAllDead(): boolean;
-  public substituteBattler(): Game_Battler;
+  public substituteBattler(target: Game_Battler): Game_Battler;
 
   public tpbBaseSpeed(): number;
   public tpbReferenceTime(): number;
