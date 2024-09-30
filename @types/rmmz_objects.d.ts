@@ -1482,7 +1482,7 @@ declare class Game_Party extends Game_Unit {
   public allMembers(): Game_Actor[];
   public battleMembers(): Game_Actor[];
   public maxBattleMembers(): number;
-  public leader(): Game_Actor;
+  public leader(): Game_Actor|undefined;
 
   public removeInvalidMembers(): void;
 
