@@ -114,7 +114,7 @@ declare class Sprite_Character extends Sprite {
 /**
  * The superclass of Sprite_Actor and Sprite_Enemy.
  */
-declare class Sprite_Battler extends Sprite {
+declare class Sprite_Battler extends Sprite_Clickable {
   public constructor(battler: Game_Battler | null);
 
   public _battler: Game_Battler | null;
