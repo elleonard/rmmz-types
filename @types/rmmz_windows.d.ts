@@ -913,7 +913,7 @@ declare class Window_ShopBuy extends Window_Selectable {
   public setMoney(money: number): void;
   public isCurrentItemEnabled(): boolean;
   public price(item: MZ.Item | MZ.Weapon | MZ.Armor): number;
-  public isEnabled(item: MZ.Item | MZ.Weapon | MZ.Armor): boolean;
+  public isEnabled(item: MZ.Item | MZ.Weapon | MZ.Armor | null): boolean;
 
   public refresh(): void;
   public makeItemList(): void;
