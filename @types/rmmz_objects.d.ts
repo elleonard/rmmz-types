@@ -1437,7 +1437,7 @@ declare class Game_Unit {
   public onBattleStart(advantageous: boolean): void;
   public onBattleEnd(): void;
   public makeActions(): void;
-  public select(activeMember: Game_Battler): void;
+  public select(activeMember: Game_Battler|null): void;
 
   public isAllDead(): boolean;
   public substituteBattler(target: Game_Battler): Game_Battler;
