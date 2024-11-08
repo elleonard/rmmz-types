@@ -587,6 +587,8 @@ declare class Game_Action {
   public checkItemScope(list: number[]): boolean;
   public isForOpponent(): boolean;
   public isForFriend(): boolean;
+  public isForEveryone(): boolean;
+  public isForAliveFriend(): boolean;
   public isForDeadFriend(): boolean;
   public isForUser(): boolean;
   public isForOne(): boolean;
