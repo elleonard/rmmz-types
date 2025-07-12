@@ -791,7 +791,7 @@ declare class Window_StatusParams extends Window_StatusBase {
 
   public initialize(rect: Rectangle, ...args: any[]): void;
 
-  public setActor(actor: Game_Actor): void;
+  public setActor(actor: Game_Actor | null): void;
   public maxItems(): number;
   public itemHeight(): number;
   public drawItem(index: number): void;
@@ -803,7 +803,7 @@ declare class Window_StatusEquip extends Window_StatusBase {
   public _actor: Game_Actor|null;
 
   public initialize(rect: Rectangle, ...args: any[]): void;
-  public setActor(actor: Game_Actor): void;
+  public setActor(actor: Game_Actor | null): void;
   public maxItems(): number;
   public itemHeight(): number;
   public drawItem(index: number): void;
