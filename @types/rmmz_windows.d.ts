@@ -184,7 +184,7 @@ declare class Window_Scrollable extends Window_Base {
   public isScrollEnabled(): boolean;
   public isTouchedInsideFrame(): boolean;
 
-  public onTOuchScrollStart(): void;
+  public onTouchScrollStart(): void;
   public onTouchScroll(): void;
   public onTouchScrollEnd(): void;
 
