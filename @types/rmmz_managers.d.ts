@@ -258,6 +258,11 @@ declare class FontManager {
 declare class ImageManager {
   private constructor();
 
+  public static standardIconWidth: number;
+  public static standardIconHeight: number;
+  public static standardFaceWidth: number;
+  public static standardFaceHeight: number;
+
   public static iconWidth: number;
   public static iconHeight: number;
   public static faceWidth: number;
