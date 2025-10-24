@@ -683,7 +683,7 @@ declare class Game_Action {
 
   public updateLastUsed(): void;
   public updateLastSubject(): void;
-  public updateLastTarget(): void;
+  public updateLastTarget(target: Game_Battler): void;
 }
 
 //-----------------------------------------------------------------------------
