@@ -42,7 +42,7 @@ declare class Game_Temp {
   public retrieveCommonEvent(): MZ.CommonEvent;
   public isCommonEventReserved(): boolean;
 
-  public requestAnimation(targets: Game_Character[]|Game_Battler[], animationId: number, mirror?: boolean): void;
+  public requestAnimation(targets: Game_Character[]|Game_BattlerBase[], animationId: number, mirror?: boolean): void;
   public retrieveAnimation(): Game_Temp.AnimationRequest;
   public requestBalloon(target: Game_Character, balloonId: number): void;
   public retrieveBalloon(): Game_Temp.BalloonRequest;
