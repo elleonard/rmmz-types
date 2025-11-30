@@ -721,6 +721,8 @@ declare class Spriteset_Base extends Sprite {
   public _effectsContainer: Tilemap|Sprite;
 
   public initialize(...args: any[]): void;
+  public destroy(options?: any[]): void;
+  public loadSystemImages(): void;
 
   public createLowerLayer(): void;
   public createUpperLayer(): void;
@@ -728,17 +730,14 @@ declare class Spriteset_Base extends Sprite {
   public update(): void;
 
   public createBaseSprite(): void;
-  public createToneChanger(): void;
-  public createWebGLToneChanger(): void;
-  public createCanvasToneChanger(): void;
+  public createBaseFilters(): void;
   public createPictures(): void;
+  public pictureContainerRect(): Rectangle;
   public createTimer(): void;
-  public createScreenSprites(): void;
+  public createOverallFilters(): void;
 
-  public updateScreenSprites(): void;
-  public updateToneChanger(): void;
-  public updateWebGLToneChanger(): void;
-  public updateCanvasToneChanger(): void;
+  public updateBaseFilters(): void;
+  public updateOverallFilters(): void;
   public updatePosition(): void;
 
   public findTargetSprite(target: Game_Character|Game_BattlerBase): Sprite_Character|Sprite_Battler;
