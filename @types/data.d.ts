@@ -308,12 +308,13 @@ declare namespace MZ {
   }
 
   interface MapInfo {
-    expanded: boolean;
+    id: number;
     name: string;
     order: number;
     parentId: number;
-    scrollX: boolean;
-    scrollY: boolean;
+    quick: boolean;
+    scrollX: number;
+    scrollY: number;
   }
 
   interface MoveCommand {
