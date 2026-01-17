@@ -9380,6 +9380,11 @@ declare namespace PIXI {
          * @return {PIXI.Point} The updated point.
          */
         getGlobalPosition(point?: PIXI.Point, skipUpdate?: boolean): PIXI.Point;
+
+        /**
+         * ツクールの作り上、updateの有無を判定して呼び出しているため
+         */
+        update?(): void;
     }
     /**
      * This class provides renderer-specific plugins for exporting content from a renderer.

@@ -1201,6 +1201,7 @@ declare class Tilemap extends PIXI.Container {
    * @type Number
    */
   public animationCount: number;
+  public animationFrame: number;
 
   /**
    * Whether the tilemap loops horizontal.
