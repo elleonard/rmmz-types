@@ -73,7 +73,7 @@ declare class Window_Base extends Window {
   public drawRect(x: number, y: number, width: number, height: number): void;
   public drawText(text: string, x: number, y: number, maxWidth?: number, align?: string): void;
   public textWidth(text: string): number;
-  public drawTextEx(text: string, x: number, y: number): number;
+  public drawTextEx(text: string, x: number, y: number, width: number): number;
   public textSizeEx(text: string): { width: number, height: number };
   public createTextState(text: string, x: number, y: number, width: number): Window_Base.TextState;
   public processAllText(textState: Window_Base.TextState): void;
