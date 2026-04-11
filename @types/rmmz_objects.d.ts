@@ -2127,7 +2127,7 @@ declare class Game_Player extends Game_Character {
   public updateVehicle(): void;
   public updateVehicleGetOn(): void;
   public updateVehicleGetOff(): void;
-  public updateNonmoving(wasMoving: boolean): void;
+  public updateNonmoving(wasMoving: boolean, sceneActive: boolean): void;
 
   public triggerAction(): boolean;
   public triggerButtonAction(): boolean;
