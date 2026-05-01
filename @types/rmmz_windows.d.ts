@@ -1525,6 +1525,7 @@ declare class Window_ActorCommand extends Window_Command {
   public addItemCommand(): void;
 
   public setup(actor: Game_Actor | null): void;
+  public actor(): Game_Actor|null;
   public processOk(): void;
   public selectLast(): void;
 }
