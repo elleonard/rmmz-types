@@ -132,6 +132,7 @@ declare class Sprite_Battler extends Sprite_Clickable {
   public initMembers(): void;
 
   public setBattler(battler: Game_Battler | null): void;
+  public checkBattler(battler: Game_Battler): boolean;
   public setHome(x: number, y: number): void;
 
   public update(): void;
