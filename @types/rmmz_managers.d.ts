@@ -96,7 +96,7 @@ declare class DataManager {
   public static loadAllSavefileImages(): void;
   public static loadSavefileImages(info: DataManager.SaveFileInfo): void;
   public static maxSavefiles(): number;
-  public static savefileInfo(): DataManager.SaveFileInfo;
+  public static savefileInfo(savefileId: number): DataManager.SaveFileInfo;
   public static savefileExists(savefileId: number): boolean;
   public static saveGame(savefileId: number): Promise<number>;
   public static loadGame(savefileId: number): Promise<number>;
