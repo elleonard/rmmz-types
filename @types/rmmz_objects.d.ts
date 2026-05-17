@@ -1102,7 +1102,7 @@ declare class Game_Battler extends Game_BattlerBase {
   public makeActionTimes(): number;
   public makeActions(): void;
   public speed(): number;
-  public makeSpeed(): number;
+  public makeSpeed(): void;
   public currentAction(): Game_Action;
   public removeCurrentAction(): void;
   public setLastTarget(target: Game_Battler): void;
