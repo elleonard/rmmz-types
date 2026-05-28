@@ -1103,7 +1103,7 @@ declare class Game_Battler extends Game_BattlerBase {
   public makeActions(): void;
   public speed(): number;
   public makeSpeed(): void;
-  public currentAction(): Game_Action;
+  public currentAction(): Game_Action|undefined;
   public removeCurrentAction(): void;
   public setLastTarget(target: Game_Battler): void;
   public forceAction(skillId: number, targetIndex: number): void;
