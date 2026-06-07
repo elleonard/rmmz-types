@@ -975,8 +975,8 @@ declare class Bitmap {
   public retry(): void;
 
   public _makeFontNameText(): string;
-  public _drawTextOutline(text: string, tx: number, ty: number, maxWidth: number): void;
-  public _drawTextBody(text: string, tx: number, ty: number, maxWidth: number): void;
+  public _drawTextOutline(text: string, tx: number, ty: number, maxWidth?: number): void;
+  public _drawTextBody(text: string, tx: number, ty: number, maxWidth?: number): void;
   public _createCanvas(width: number, height: number): void;
   public _ensureCanvas(): void;
   public _destroyCanvas(): void;

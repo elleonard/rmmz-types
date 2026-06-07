@@ -71,7 +71,7 @@ declare class Window_Base extends Window {
   public changePaintOpacity(enabled: boolean): void;
 
   public drawRect(x: number, y: number, width: number, height: number): void;
-  public drawText(text: string, x: number, y: number, maxWidth?: number, align?: string): void;
+  public drawText(text: string, x: number, y: number, maxWidth?: number, align?: CanvasTextAlign): void;
   public textWidth(text: string): number;
   public drawTextEx(text: string, x: number, y: number, width: number): number;
   public textSizeEx(text: string): { width: number, height: number };
