@@ -349,7 +349,7 @@ declare class Window_Command extends Window_Selectable {
   public selectExt(ext: any): void;
 
   public drawItem(index: number): void;
-  public itemTextAlign(): string;
+  public itemTextAlign(): CanvasTextAlign;
 
   public isOkEnabled(): boolean;
   public callOkHandler(): void;
